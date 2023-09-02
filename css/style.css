@@ -1,0 +1,176 @@
+/* Общие стили для всего контента */
+body {
+    font-family: 'Neucha', cursive;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+h1,
+h2,
+h3 {
+    margin: 0;
+}
+
+/* Стили для шапки */
+.header {
+    width: 100%;
+    padding: 15px 0;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 300;
+    color: gray;
+}
+
+.header__logo {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* Стили для контейнера героя */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container {
+    max-width: 1230px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.hero__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row-reverse;
+    text-align: center;
+}
+
+/* Стили для контента героя */
+.hero_content {
+    max-width: 600px;
+    padding: 20px;
+    text-align: left;
+}
+
+.hero_title {
+    font-size: 32px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.hero_discription {
+    text-indent: 1.5em;
+}
+
+/* Стили для ссылок в футере */
+.footer {
+    background-color: #f0f0f0;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer .hero_links {
+    margin-top: 10px;
+}
+
+/* Стили для ссылок социальных сетей */
+.hero_links a {
+    margin-right: 10px;
+    font-size: 30px;
+    color: #000;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.hero_links a:hover {
+    color: blueviolet;
+}
+
+/* Стили для изображения */
+.hero_box {
+    max-width: 400px;
+    overflow: hidden;
+    background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);
+    border: 10px solid #fff;
+    box-shadow: 2px 5px 10px;
+    animation: ava 5s linear infinite alternate;
+    flex-shrink: 0;
+}
+
+.style_img {
+    animation: avaBg 3s infinite alternate;
+}
+
+@keyframes ava {
+    0% {
+        border-radius: 58% 42% 37% 63% / 30% 30% 70% 70%;
+    }
+    40% {
+        border-radius: 24% 76% 78% 22% / 53% 22% 78% 47%;
+    }
+    60% {
+        border-radius: 73% 27% 97% 3% / 19% 64% 36% 81%;
+    }
+    100% {
+        border-radius: 35% 65% 48% 52% / 50% 78% 22% 50%;
+    }
+}
+
+@keyframes avaBg {
+    from {
+        backdrop-filter: hue-rotate(0);
+    }
+    to {
+        backdrop-filter: hue-rotate(90deg);
+    }
+}
+
+/* Медиа-запросы для адаптивного дизайна */
+@media screen and (max-width: 768px) {
+    .hero__container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero_title {
+        font-size: 28px;
+        margin-bottom: 10px;
+    }
+
+    .hero_subtitle {
+        font-size: 22px;
+        font-weight: 400;
+    }
+
+    .hero_discription {
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .hero_box {
+        margin-top: 20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .hero_title {
+        font-size: 24px;
+    }
+
+    .hero_subtitle {
+        font-size: 18px;
+    }
+
+    .hero_discription {
+        font-size: 12px;
+    }
+}
